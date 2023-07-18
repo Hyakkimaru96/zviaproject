@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Login Page</title>
+  <style>
+    body {
+      background-color: #1E1F27;
+    }
+
+    h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      background-color: transparent;
+      color: white;
+      padding-top: 1.0rem;
+      padding-bottom: 1.0rem;
+      font-family: 'Nunito', sans-serif;
+      border: 2px solid #626262;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: white;
+      opacity: 0.7;
+    }
+
+    label {
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      background-color: #626262; /* Updated background color */
+      padding: 0.25rem 0.5rem; /* Added padding */
+      border-radius: 4px; /* Added border radius */
+    }
+
+    /* Updated CSS for the sign-in button */
+    .sign-in-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    /* Added CSS for the Google sign-in image */
+    .google-sign-in-image {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex items-center justify-between p-6">
+    <div>
+      <img src="C:\Users\THARUN.M\Desktop\logo_128 1.png" alt="Logo" class="h-8 w-auto">
+    </div>
+    <ul class="flex space-x-4 text-white">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center justify-center h-screen">
+    <h2 class="text-4x2 font-semibold text-white text-center mb-6">Login</h2>
+    <form class="max-w-sm mx-auto">
+      <div class="mb-4">
+        <label for="usernameOrEmail" class="hidden">Username or Email</label>
+        <input type="text" id="usernameOrEmail" name="usernameOrEmail" placeholder="Username or Email" class="w-80 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 bg-transparent text-white" required>
+      </div>
+      <div class="mb-4">
+        <label for="password" class="hidden">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" class="w-80 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 bg-transparent text-white" required>
+      </div>
+      <div class="flex items-center justify-center mt-2">
+        <hr class="w-1/2 border-gray-300">
+        <span class="mx-1 text-white">or</span>
+        <hr class="w-1/2 border-gray-300">
+      </div>
+      <div class="row justify-content-center">
+        <div class="flex items-center justify-center mt-4">
+          <a href="/users/googleauth" class="bg-white text-gray-800 py-2 px-4 rounded-lg flex items-center sign-in-button"> <!-- Added "sign-in-button" class -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google sign-in" class="google-sign-in-image"> <!-- Added "google-sign-in-image" class -->
+            Sign in with Google
+          </a>
+        </div>
+      </div>
+    </form>
+    <p class="text-white mt-2 text-center">
+      <a href="/users/signup" class="text-white underline">Or sign up here instead</a>.
+    </p>
+  </div>
+</body>
+
+</html>
